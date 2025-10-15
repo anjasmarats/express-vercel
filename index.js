@@ -33,7 +33,7 @@ app.post('/user', async (req, res) => {
       .single();
 
     if (err || !user) {
-      console.error("error mengecek db", error,"\n\nuser\n\n",user)
+      console.error("error mengecek db", err,"\n\nuser\n\n",user)
       return res.json(500).json({
         message: "error mengecek db"
       });
