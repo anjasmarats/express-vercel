@@ -56,7 +56,7 @@ app.post('/user', async (req, res) => {
   if (error) {
     return res.status(500).json({ error: error.message });
   }
-  res.status(201).json(data);
+  return res.status(201).json(data);
 });
 
 // PUT - Perbarui produk berdasarkan ID
